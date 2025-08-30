@@ -61,7 +61,6 @@ router.options('/create-order', (req, res) => {
 router.post('/create-order', async (req, res) => {
   try {
     console.log('⚡ /create-order hit!'); // <-- This will print whenever route is called
-  console.log('Request body:', req.body); // <-- Print the payload from frontend
     const { consultantId, amount, sessionId } = req.body;
     const db = getFirestore();
 
