@@ -29,7 +29,7 @@ const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
 const paymentRoutes = require('./routes/payment');
-const serviceAccount = require('./serviceAccountKey.json'); // CommonJS require
+// const serviceAccount = require('./serviceAccountKey.json'); // CommonJS require
 
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
