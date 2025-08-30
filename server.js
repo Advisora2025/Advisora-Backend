@@ -13,14 +13,14 @@ admin.initializeApp({
 const app = express();
 
 // 🔓 Allow frontend access (Angular: http://localhost:4200)
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: 'https://advisora-project-yhnz.vercel.app/' }));
 app.use(express.json());
 
 // 📦 Register routes
 app.use('/api', paymentRoutes);
 
 // 🚀 Start server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Backend running at http://localhost:${PORT}`);
-});
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`✅ Backend running at http://localhost:${PORT}`);
+// });
