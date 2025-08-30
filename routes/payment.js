@@ -60,6 +60,8 @@ router.options('/create-order', (req, res) => {
 // POST /create-order
 router.post('/create-order', async (req, res) => {
   try {
+    console.log('⚡ /create-order hit!'); // <-- This will print whenever route is called
+  console.log('Request body:', req.body); // <-- Print the payload from frontend
     const { consultantId, amount, sessionId } = req.body;
     const db = getFirestore();
 
@@ -91,5 +93,8 @@ router.post('/create-order', async (req, res) => {
     res.status(500).send('Payment Failed due to server error.');
   }
 });
+app.use(express.json());
+// 📦 Register routes
+app.use('/api', paymentRoutes);
 
 module.exports = router;
