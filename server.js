@@ -31,6 +31,11 @@ const admin = require('firebase-admin');
 const paymentRoutes = require('./routes/payment');
 // const serviceAccount = require('./serviceAccountKey.json'); // CommonJS require
 
+
+if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT is not set");
+}
+
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 // 🔐 Initialize Firebase Admin
