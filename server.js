@@ -25,7 +25,6 @@
 // //   console.log(`✅ Backend running at http://localhost:${PORT}`);
 // // });
 
-// server.js (CommonJS style for Vercel)
 const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
