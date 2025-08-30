@@ -93,8 +93,5 @@ router.post('/create-order', async (req, res) => {
     res.status(500).send('Payment Failed due to server error.');
   }
 });
-app.use(express.json());
-// 📦 Register routes
-app.use('/api', paymentRoutes);
 
 module.exports = router;
