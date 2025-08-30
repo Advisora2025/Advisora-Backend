@@ -32,6 +32,8 @@ const admin = require('firebase-admin');
 const paymentRoutes = require('./routes/payment');
 const serviceAccount = require('./serviceAccountKey.json'); // CommonJS require
 
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
 // 🔐 Initialize Firebase Admin
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
